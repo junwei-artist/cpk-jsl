@@ -1,0 +1,94 @@
+// Start for FAI12
+Column("FAI12") << Set Property(
+    "Spec Limits",
+    {LSL(28.0), USL(30.0), Target(29)}
+);
+gb = Process Capability(
+    Process Variables( :FAI12 ),
+    Moving Range Method( Average of Moving Ranges ),
+    Individual Detail Reports( 1 ),
+    Capability Box Plots( 0 ),
+    Goal Plot( 0 ),
+    Capability Index Plot( 0 ),
+    Process Performance Plot( 0 )
+);
+Wait(0.5);
+If( Is Scriptable( gb ),
+    gb << Set Control Panel( 0 );
+    Wait( 0.3 );
+    gb << Save Picture( "output/spec/FAI12_spec.png", png );
+    gb << Close Window;
+);
+// End for FAI12
+
+
+// Start for FAI13
+Column("FAI13") << Set Property(
+    "Spec Limits",
+    {LSL(14.8), USL(15.2), Target(15)}
+);
+gb = Process Capability(
+    Process Variables( :FAI13 ),
+    Moving Range Method( Average of Moving Ranges ),
+    Individual Detail Reports( 1 ),
+    Capability Box Plots( 0 ),
+    Goal Plot( 0 ),
+    Capability Index Plot( 0 ),
+    Process Performance Plot( 0 )
+);
+Wait(0.5);
+If( Is Scriptable( gb ),
+    gb << Set Control Panel( 0 );
+    Wait( 0.3 );
+    gb << Save Picture( "output/spec/FAI13_spec.png", png );
+    gb << Close Window;
+);
+// End for FAI13
+
+
+// Start for FAI14
+Column("FAI14") << Set Property(
+    "Spec Limits",
+    {LSL(13.9), USL(14.1), Target(14)}
+);
+gb = Process Capability(
+    Process Variables( :FAI14 ),
+    Moving Range Method( Average of Moving Ranges ),
+    Individual Detail Reports( 1 ),
+    Capability Box Plots( 0 ),
+    Goal Plot( 0 ),
+    Capability Index Plot( 0 ),
+    Process Performance Plot( 0 )
+);
+Wait(0.5);
+If( Is Scriptable( gb ),
+    gb << Set Control Panel( 0 );
+    Wait( 0.3 );
+    gb << Save Picture( "output/spec/FAI14_spec.png", png );
+    gb << Close Window;
+);
+// End for FAI14
+
+
+// Start for FAI10
+Column("FAI10") << Set Property(
+    "Spec Limits",
+    {LSL(17.5), USL(18.5), Target(18)}
+);
+gb = Process Capability(
+    Process Variables( :FAI10 ),
+    Moving Range Method( Average of Moving Ranges ),
+    Individual Detail Reports( 1 ),
+    Capability Box Plots( 0 ),
+    Goal Plot( 0 ),
+    Capability Index Plot( 0 ),
+    Process Performance Plot( 0 )
+);
+Wait(0.5);
+If( Is Scriptable( gb ),
+    gb << Set Control Panel( 0 );
+    Wait( 0.3 );
+    gb << Save Picture( "output/spec/FAI10_spec.png", png );
+    gb << Close Window;
+);
+// End for FAI10
